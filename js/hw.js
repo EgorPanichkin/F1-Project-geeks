@@ -75,11 +75,16 @@ function startEvent() {
   timerSec.innerText = sec
   return interval = setInterval(() => {
     msec++
-    if (msec === 100) {
+    if (msec < 10) {
+      timerMS.innerText ='0' + msec
+    } else {
+      timerMS.innerText = msec
+    }
+    if (msec === 99) {
       msec = 0
       sec ++
     }
-    timerMS.innerText = msec
+    
     timerSec.innerText = sec
   }, 10)
 }
@@ -96,8 +101,8 @@ resetBtn.addEventListener('click', () => {
   clearInterval(interval)
   msec = 0
   sec = 0
-  timerMS.innerText = msec
-  timerSec.innerText = sec
+  timerMS.innerText ='0' + msec
+  timerSec.innerText ='0' + sec
   startBtn.addEventListener('click', startEvent)
   lights.forEach((light) => {
     light.style.opacity = 0

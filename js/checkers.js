@@ -6,7 +6,7 @@ const phoneResult = document.querySelector('#phone_result')
 const phoneSelect = document.querySelector('#phone-selector')
 
 
-const regPhone = /^\+996 [2579]\d{2} \d{2}-\d{2}-\d{2}$/
+let regPhone = /^\+996 [2579]\d{2} \d{2}-\d{2}-\d{2}$/
 
 phoneSelect.addEventListener('change',() => {
   phoneInput.value = null
@@ -29,7 +29,7 @@ phoneSelect.addEventListener('change',() => {
 }
 })
 
-phoneButton.addEventListener('click', () => {
+function checkRegPhone() {
   if (regPhone.test(phoneInput.value)) {
     phoneResult.innerHTML = 'We will call you back'
     phoneResult.style.color = '#6cd3bf'
@@ -37,11 +37,15 @@ phoneButton.addEventListener('click', () => {
     phoneResult.innerHTML = 'Unknown number'
     phoneResult.style.color = 'red'
   }
+}
+
+phoneButton.addEventListener('click', () => {
+  checkRegPhone()
 })
 
 phoneInput.addEventListener('keydown', (event) => {
   if (event.code === 'Enter') {
-    console.log('enter');
+    checkRegPhone()
   }
 })
 
