@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/stylesheet.css">
+  <link rel="stylesheet" href="../css/conacts.css">
+  <link rel="stylesheet" href="../css/modal.css">
+  <title>Contacts</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">
+          <img class="logo__img" src="../img/F1.svg" alt="Logo">
+        </a>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a href="../pages/hw.html">Home Works</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="../pages/lessons.html">Lessons</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="../pages/contacts.html">Contacts</a>
+        </li>
+      </ul>
+      <button id="btn-get">Lets Race!</button>
+    </div>
+  </header>
+  <section class="main">
+    <div class="container">
+      <h3>Back Call</h3>
+      <div class="inner_phone_block">
+        <div class="form_phone">
+          <label for="phone_input"></label>
+          <div>
+            <select class="btn" id="phone-selector">
+              <option value="1" selected>KGS</option>
+              <option value="2">RUS</option>
+              <option value="3">USA</option>
+            </select>
+            <input type="text" id="phone_input" placeholder="+996 XXX XX-XX-XX">
+          </div>
+          <button class="btn" id="phone_button">Check number</button>
+          <span class="checker" id="phone_result"></span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h3>Contact with gmail</h3>
+        <div class="inner_gmail_block">
+          <div class="form_gmail">
+            <label for="gmail_input"></label>
+            <input type="text" id="gmail_input" placeholder="your gmail">
+            <button class="btn" id="gmail_button">Check gmail</button>
+            <span class="checker" id="gmail_result"></span>
+          </div>
+        </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>© Made by Panichkin Egor supported by GeekTech</p>
+      <img src="../img/Ferrari.png" alt="" class="ferrari">
+    </div>
+  </footer>
+
+  <div class="modal">
+    <div class="modal_dialog">
+        <div class="modal_content">
+            <form action="#">
+                <div class="modal_close">&times;</div>
+                <div class="modal_title">We will contact you quickly as it possible!</div>
+                <input required placeholder="Your name" name="name" type="text" class="modal_input">
+                <input required placeholder="Your phone number" name="phone" type="phone" class="modal_input">
+                <button class="modal_btn">Call me back</button>
+            </form>
+        </div>
+    </div>
+  </div>
+</body>
+  <script src="../js/checkers.js"></script>
+  <script src="../js/modal.js"></script>
+</html>

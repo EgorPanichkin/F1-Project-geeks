@@ -1,0 +1,86 @@
+@import core
+
+.tab_slider
+  padding: 50px 0
+
+
+h3
+  font-family: 'CampusOutlineC', sans-serif
+  font-size: 60px
+  text-align: center
+
+
+.tab_content_block
+  width: 700px
+  border: 1px solid black
+  padding: 20px
+  border-radius: 10px
+  text-align: center
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: space-between
+  height: 440px
+  p
+    color: white
+    margin-top: 10px
+    text-align: justify
+  h4
+    font-size: 20px
+  img
+    margin-top: 20px
+    height: 150px
+
+
+.tab_content_items
+  width: 400px
+  display: flex
+  flex-direction: column
+  row-gap: 5px
+  div
+    &:nth-child(1)
+      color: #3671c6
+    &:nth-child(2)
+      color: #6cd3bf
+    &:nth-child(3)
+      color: #f91536
+    &:nth-child(4)
+      color: #358c75
+    &:nth-child(5)
+      color: #f58020
+    &:nth-child(6)
+      color: #2293d1
+    &:nth-child(7)
+      color: #37bedd
+    &:nth-child(8)
+      color: #c92d4b
+    &:nth-child(9)
+      color: #ffffff
+    &:nth-child(10)
+      color: #5e8faa
+
+
+.tab_content_item
+  padding: 10px
+  height: 40px
+  color: white
+  border: 1px solid black
+  border-radius: 10px
+  text-align: center
+  font-size: 20px
+  cursor: pointer
+  display: grid
+  place-content: center
+
+
+.tab_content_item_active
+  color: black
+  font-weight: 600
+  border: 1px solid white
+
+
+.tab_contents_block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 50px

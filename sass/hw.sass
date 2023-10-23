@@ -1,0 +1,82 @@
+@import core
+// track car
+.inner_move_block
+  margin: 0 auto
+.parent_block
+  position: relative
+  height: 800px
+  background-position: center
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url(../img/track.png)
+
+.child_block
+  position: absolute
+  width: 100px
+  top: 142px
+  left: 400px
+
+
+// Stopwatch
+h3 
+  font-family: 'CampusOutlineC', sans-serif
+  font-size: 60px
+  text-align: center
+  margin-bottom: 20px
+
+.stopwatch_inner
+  margin-bottom: 50px
+  text-align: center
+
+.time_block
+  font-size: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 10px
+
+.time_buttons
+  text-align: center
+  margin-bottom: 50px
+
+// Light
+
+.lights
+  position: relative
+  margin: 0 auto 20px
+  width: 600px
+  height: 400px
+  background-image: url(../img/light-off.png)
+  background-size: cover
+  background-repeat: no-repeat
+
+.light
+  position: absolute
+  left: 46px
+  width: 506px
+  height: 80px
+  background-size: cover
+  background-repeat: no-repeat
+  opacity: 0
+
+#red-1
+  top: 288px
+  background-image: url(../img/red-light.png)
+#red-2
+  top: 202px
+  background-image: url(../img/red-light.png)
+#green
+  top: 116px
+  background-image: url(../img/green-light.png)
+#yellow
+  top: 30px
+  background-image: url(../img/yellow-light.png)
+
+.active
+  opacity: 1
+
+#race
+  margin: 0 auto
+  width: 300px
+  border: 2px solid #f91536
+  color: #f91536
