@@ -23,7 +23,16 @@ window.addEventListener('scroll', function scrollEvent() {
     window.removeEventListener('scroll', scrollEvent)
   }
 })
-// Stig
+
+if (document.body.offsetHeight < window.innerHeight) {
+  const int = setInterval(() => {
+    moveCar()
+    if (rightPosition > window.innerWidth) {
+      console.log('stop');
+      clearInterval(int)
+    }
+  }, 5)
+}
 
 
 // Modal window

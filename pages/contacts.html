@@ -19,10 +19,13 @@
       </div>
       <ul class="nav-list">
         <li class="nav-list__item">
-          <a href="../pages/hw.html">Home Works</a>
+          <a href="../pages/hw.html">Tracks</a>
         </li>
         <li class="nav-list__item">
-          <a href="../pages/lessons.html">Lessons</a>
+          <a href="../pages/lessons.html">Teams</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="../pages/pilots.html">Pilots</a>
         </li>
         <li class="nav-list__item">
           <a href="../pages/contacts.html">Contacts</a>
@@ -62,6 +65,52 @@
         </div>
     </div>
   </section>
+  <section class="converter">
+    <div class="container">
+      <h3>Currency exchange</h3>
+      <p>You can see the current exchange rate to make it more convenient for you to buy a ticket and pay in the country where the Grand Prix will be held</p>
+      <div class="currency">
+        <select class="btn" id="currency-selector1">
+          <option value="SGD">SGD - Сингапурский доллар</option>
+          <option value="QAR">QAR - Катарский риал</option>
+          <option value="HUF">HUF - Венгерскй форинт</option>
+          <option value="BGN">BGN - Болгарский лев</option>
+          <option value="BYN">BYN - Белорусский рубль</option>
+          <option value="AZN">AZN - Азербайджанский манат</option>
+          <option value="AUD">AUD - Австралийский доллар</option>
+          <option value="KGS" selected>KGS - Киргизский сом</option>
+          <option value="EUR">EUR - Евро</option>
+          <option value="USD">USD - Американский доллар</option>
+          <option value="GBP">GBP - Фунты стерлинга</option>
+          <option value="KZT">KZT - Казахский тенге</option>
+          <option value="RUB">RUB - Российский рубль</option>
+          <option value="CNY">CNY - Китайский юань</option>
+          <option value="JPY">JPY - Японская иена</option>
+        </select>
+        <input class="currency-input" type="number" id="currency-input1">
+      </div>
+      <div class="currency">
+        <select class="btn" id="currency-selector2">
+          <option value="SGD">SGD - Сингапурский доллар</option>
+          <option value="QAR">QAR - Катарский риал</option>
+          <option value="HUF">HUF - Венгерскй форинт</option>
+          <option value="BGN">BGN - Болгарский лев</option>
+          <option value="BYN">BYN - Белорусский рубль</option>
+          <option value="AZN">AZN - Азербайджанский манат</option>
+          <option value="AUD">AUD - Австралийский доллар</option>
+          <option value="KGS">KGS - Киргизский сом</option>
+          <option value="EUR">EUR - Евро</option>
+          <option value="USD" selected>USD - Американский доллар</option>
+          <option value="GBP">GBP - Фунты стерлинга</option>
+          <option value="KZT">KZT - Казахский тенге</option>
+          <option value="RUB">RUB - Российский рубль</option>
+          <option value="CNY">CNY - Китайский юань</option>
+          <option value="JPY">JPY - Японская иена</option>
+        </select>
+        <input class="currency-input" type="number" id="currency-input2">
+      </div>
+    </div>
+  </section>
   <footer>
     <div class="container">
       <p>© Made by Panichkin Egor supported by GeekTech</p>
@@ -84,5 +133,6 @@
   </div>
 </body>
   <script src="../js/checkers.js"></script>
+  <script src="../js/converter.js"></script>
   <script src="../js/modal.js"></script>
 </html>
