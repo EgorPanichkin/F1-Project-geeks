@@ -132,145 +132,44 @@ footer .container {
             transform: translate(0, 0);
   }
 }
-.inner_move_block {
-  margin: 0 auto;
-}
-
-.parent_block {
-  position: relative;
-  height: 800px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(../img/track.png);
-}
-
-.child_block {
-  position: absolute;
-  width: 100px;
-  top: 142px;
-  left: 400px;
-}
-
-h3 {
-  font-family: "CampusOutlineC", sans-serif;
-  font-size: 60px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.stopwatch_inner {
+.main {
+  margin-top: 50px;
   margin-bottom: 50px;
-  text-align: center;
 }
 
-.time_block {
-  font-size: 40px;
+.peoples-inner {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.time_buttons {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.lights {
-  position: relative;
-  margin: 0 auto 20px;
-  width: 600px;
-  height: 400px;
-  background-image: url(../img/light-off.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.light {
-  position: absolute;
-  left: 46px;
-  width: 506px;
-  height: 80px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0;
-}
-
-#red-1 {
-  top: 288px;
-  background-image: url(../img/red-light.png);
-}
-
-#red-2 {
-  top: 202px;
-  background-image: url(../img/red-light.png);
-}
-
-#green {
-  top: 116px;
-  background-image: url(../img/green-light.png);
-}
-
-#yellow {
-  top: 30px;
-  background-image: url(../img/yellow-light.png);
-}
-
-.active {
-  opacity: 1;
-}
-
-#race {
-  margin: 0 auto;
-  width: 300px;
-  border: 2px solid #f91536;
-  color: #f91536;
-}
-
-.weather {
-  padding: 100px 0;
-}
-
-.inner_weather {
-  width: 435px;
-  margin: 0 auto;
+.card {
+  padding: 7px;
   border: 2px solid white;
-  border-radius: 10px;
-  padding: 10px;
+  width: 270px;
   text-align: center;
 }
-.inner_weather img {
-  width: 125px;
+
+.user-avatar {
+  width: 100px;
+  padding-bottom: 15px;
 }
 
-#city {
-  margin-top: 20px;
-  font-size: 25px;
-  font-weight: 700;
-}
-
-#temp {
-  font-size: 30px;
-}
-
-.city-input {
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 2px solid white;
-  border-radius: 3px;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+.user-header {
   font-size: 20px;
-  text-align: left;
+  padding-bottom: 10px;
+}
+
+.user-text {
+  color: white;
 }

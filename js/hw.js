@@ -176,3 +176,58 @@ function stopTimers() {
 function randomTime() {
   return timer = Math.floor(Math.random() * (2501 - 1000) + 1000);
 }
+
+// WEATHER
+// fetch URL `${BASE_URL}?q=${searchingCity}&appid=${API_KEY}`
+// icon URL `https://openweathermap.org/img/wn/${iconName}@2x.png`
+
+const cityInput = document.querySelector('.city-input')
+const city = document.querySelector('#city')
+const temp = document.querySelector('#temp')
+const icon = document.querySelector('#weather-img')
+
+let searchingCity
+let iconName
+
+const API_KEY = 'e417df62e04d3b1b111abeab19cea714'
+const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
+// const ICON_URL = `https://openweathermap.org/img/wn/${iconName}@2x.png`
+
+cityInput.value === '' ? searchingCity = 'Bishkek' : searchingCity = cityInput.value
+weatherRequest()
+
+async function weatherRequest() {
+  const response = await fetch(`${BASE_URL}?q=${searchingCity}&appid=${API_KEY}`)
+  const data = await response.json()
+  iconName = data.weather[0].icon
+  console.log(iconName);
+  icon.setAttribute('src', `https://openweathermap.org/img/wn/${iconName}@2x.png`)
+  city.innerHTML = data?.name ? data?.name : 'Город не найден...'
+  temp.innerHTML = data?.main?.temp ? Math.round(data?.main?.temp - 273) + '&deg;C' : '...'
+  if (data.main.temp - 273 > 30) {
+    temp.style.color = '#f91536'
+  } else if (data.main.temp - 273 < 0) {
+    temp.style.color = '#3671c6'
+  } else {
+    temp.style.color = 'white'
+  }
+}
+
+const debounceCityInput = debounce(weatherRequest, 300)
+
+cityInput.oninput = () => {
+  searchingCity = cityInput.value
+  debounceCityInput()
+}
+
+// DEBOUNCE
+function debounce(callee, timeoutMs) {
+  return function perform(...args) {
+    let previousCall = this.lastCall
+    this.lastCall = Date.now()
+    if (previousCall && this.lastCall - previousCall <= timeoutMs) {
+      clearTimeout(this.lastCallTimer)
+    }
+    this.lastCallTimer = setTimeout(() => callee(...args), timeoutMs)
+  }
+}
