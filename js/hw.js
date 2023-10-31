@@ -193,8 +193,8 @@ const API_KEY = 'e417df62e04d3b1b111abeab19cea714'
 const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
 // const ICON_URL = `https://openweathermap.org/img/wn/${iconName}@2x.png`
 
-cityInput.value === '' ? searchingCity = 'Bishkek' : searchingCity = cityInput.value
-weatherRequest()
+// cityInput.value === '' ? searchingCity = 'Bishkek' : searchingCity = cityInput.value
+// weatherRequest()
 
 async function weatherRequest() {
   const response = await fetch(`${BASE_URL}?q=${searchingCity}&appid=${API_KEY}`)
